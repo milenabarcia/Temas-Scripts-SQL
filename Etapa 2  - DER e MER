@@ -5,7 +5,7 @@ Atributos : nome e descrição
 Relacionamentos: 1:N (Um animal pertence a uma espécie, mas uma esécie pod ter varios animais)
 
      +-------------------+       
-     |      Animal       |       
+     | Animal Fantastico |       
      +-------------------+       
      | nome (PK)         |       
      | data_nasc         |       
@@ -17,7 +17,7 @@ Relacionamentos: 1:N (Um animal pertence a uma espécie, mas uma esécie pod ter
              | N
              |
      +-------------------+
-     |     Espécie       |
+     |Espécie Fantastica |
      +-------------------+
      |                   |
      | nome (PK)         |

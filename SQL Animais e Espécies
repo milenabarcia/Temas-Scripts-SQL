@@ -1,0 +1,31 @@
+CREATE TABLE EspécieFantastica (
+    id              INTEGER  PRIMARY KEY AUTOINCREMENT,
+    nome            VARCHAR(100),
+    descrição       TEXT
+);
+
+CREATE TABLE AnimalFantástico (
+    nome            VARCHAR(100),
+    data_nasc       DATE,
+    peso            FLOAT,
+    especie_id      INT, 
+    FOREIGN KEY (especie_id) REFERENCES EspécieFantastica(id)
+);
+
+
+INSERT INTO EspécieFantastica (nome, descrição) VALUES ('Fera', 'são incapazes de entender e respeitar as leis mágicas');
+INSERT INTO EspécieFantastica (nome, descrição) VALUES ('Ser', 'qualquer criatura que tem inteligência suficiente para compreender as leis da comunidade mágica e suportar parte da responsabilidade na formação dessas leis');
+INSERT INTO EspécieFantastica (nome, descrição) VALUES ('Espírito', 'criatura não-corpórea, embora não necessariamente não-sólida.');
+
+SELECT * FROM EspécieFantastica
+
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Hipogrifo', '2019-05-15', 2000, 1);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Ocami', '2015-06-30', 000, 1);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Pelúcio', '2021-08-18', 15, 1);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Centauro', '1563-03-02', 450, 2);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Sereiano', '1819-06-15', 90, 2);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Elfo Doméstico', '2002-11-22', 17, 2);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Banshee', '1000-01-20', 0, 3);
+INSERT INTO AnimalFantástico (nome, data_nasc, peso, especie_id) VALUES('Caipora', '0500-01-01', 5, 3);
+
+SELECT * FROM 	AnimalFantástico

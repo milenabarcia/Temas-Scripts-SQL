@@ -1,0 +1,67 @@
+Animal: Representa o ser vivo que pertence a espécie
+Atributos: nome, data nascimento e peso
+Espécie: Representa a subdivisão do gênro ao qual o animal pertence
+Atributos : nome e descrição
+Relacionamentos: 1:N (Um animal pertence a uma espécie, mas uma esécie pod ter varios animais)
+
+     +-------------------+       
+     |      Animal       |       
+     +-------------------+       
+     | nome (PK)         |       
+     | data_nasc         |       
+     | peso              |      
+     |                   |      
+     +-------------------+
+             | 1
+             |
+             | N
+             |
+     +-------------------+
+     |     Espécie       |
+     +-------------------+
+     |                   |
+     | nome (PK)         |
+     | descrição         |
+     +-------------------+
+
+Produto: item que está a venda​
+Atributos: Nome, Preço de custo, preço de venda e data de validade
+Marca: produtora do produto​
+Atributos: Nome , SAC , Site 
+Relacionamento: Marca produz Produto​ N:N ( uma marca pode fabricar vários produtos e o mesmo tipo de produto pode ter várias marcas, por exemplo temos várias marcas de sabonete)​
+
+     +-------------------+      
+     |     Produto       |       
+     +-------------------+       
+     | nome  (PK)        |      
+     | preco de custo    |       
+     | preço de venda    |       
+     | data de validade  |       
+     |                   |       
+     +-------------------+
+             | N
+             |
+             | N
+             |
+     +-------------------+
+     |      Marca        |
+     +-------------------+
+     |                   |
+     | nome  (PK)        |
+     | site              |
+     | SAC               |
+     +-------------------+
+
+Filme: Representa o filme pertencente a categoria
+Atributos: Titulo, Sinopse e Estudio
+Categoria: representa a forma como os filmes são catalogados
+Atributos: Nome e Publico alvo
+Relacionamentos: 1:N (Um filme pertence a uma categoria, mas uma categoria pode ter vários filmes) 
+
+     +-------------------+         +------------------+
+     |      Filme        |         |    Categoria     |
+     +-------------------+         +------------------+
+     | titulo (PK)       |   1:N   |                  |
+     | sinopse           | _______ | nome (PK)        |
+     | estudio           |         | publico alvo     |
+     +-------------------+         +------------------+

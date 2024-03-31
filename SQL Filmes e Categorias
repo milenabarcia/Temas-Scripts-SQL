@@ -1,0 +1,24 @@
+CREATE TABLE Filmes (
+    ID_filme     INTEGER PRIMARY KEY AUTOINCREMENT,
+    Titulo       VARCHAR(100),
+    Sinopse      TEXT,
+    Estudio      VARCHAR(100),
+    ID_categoria INTEGER,
+    FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_categoria)
+);
+
+CREATE TABLE Categoria (
+    ID_categoria INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nome         VARCHAR(100),
+    PublicoAlvo  VARCHAR(50)
+);
+
+INSERT INTO Categoria (Nome, PublicoAlvo) VALUES ('Fantasia', 'Família');  
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e a Pedra Filosofal', 'Harry Potter descobre que é um bruxo e começa sua jornada na Escola de Magia e Bruxaria de Hogwarts, onde faz amigos, enfrenta desafios e descobre segredos sobre seu passado.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e a Câmara Secreta', 'Harry retorna a Hogwarts para seu segundo ano e descobre que algo misterioso está petrificando os alunos. Ele investiga uma antiga câmara secreta e enfrenta a ameaça do herdeiro de Salazar Slytherin.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e o Prisioneiro de Azkaban', 'Harry enfrenta Sirius Black, um prisioneiro que escapou de Azkaban e é acusado de traição. Ele descobre a verdade sobre seu passado e o papel de Sirius na morte de seus pais.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e o Cálice de Fogo', 'Harry é selecionado para participar do perigoso Torneio Tribruxo, enfrentando desafios mortais e descobrindo uma conspiração que o leva a confrontar Voldemort, que retorna à forma física.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e a Ordem da Fênix', 'Harry enfrenta a resistência do Ministério da Magia e forma a Ordem da Fênix para combater Voldemort, enquanto lida com visões perturbadoras e conflitos pessoais.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e o Enigma do Príncipe', 'Harry descobre um livro antigo que pertenceu ao misterioso Príncipe Mestiço e aprende mais sobre o passado de Voldemort. Ele se prepara para o confronto final enquanto o mundo bruxo enfrenta tempos sombrios.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e as Relíquias da Morte – Parte 1', 'Harry, Ron e Hermione embarcam em uma perigosa missão para destruir as Horcruxes de Voldemort. Eles enfrentam desafios e perdas enquanto o poder das trevas cresce.', 'Warner Bros.', 1);
+INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e as Relíquias da Morte – Parte 2', ' Harry retorna a Hogwarts para encontrar e destruir a última Horcrux, confrontando Voldemort em uma batalha épica que determinará o destino do mundo mágico.', 'Warner Bros.', 1);

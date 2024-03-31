@@ -1,0 +1,33 @@
+CREATE TABLE Produto (
+    ID_produto INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nome         VARCHAR(100),
+    PrecoCusto   DECIMAL(10, 2),
+    PrecoVenda   DECIMAL(10, 2),
+    DataValidade DATE,
+    ID_marca     INTEGER,
+    FOREIGN KEY (ID_marca) REFERENCES Marca(ID_marca)
+);
+
+
+CREATE TABLE Marca (
+    ID_marca  INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nome      VARCHAR(100),
+    SAC       VARCHAR(20),
+    Site      VARCHAR(100)
+);
+
+INSERT INTO Marca (Nome, SAC, Site) VALUES ('Olivaras', '0800-123456', 'www.olivaras.com');
+INSERT INTO Marca (Nome, SAC, Site) VALUES ('Floreios e Borrões', '0800-987654', 'www.floreioseborroes.com');
+INSERT INTO Marca (Nome, SAC, Site) VALUES ('Madame Malkin', '0800-555888', 'www.madamemalkin.com');
+
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Varinha de Núcleo de Dragão', 50.00, 100.00, '2025-12-31', '1');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Livro dos Monstros', 20.00, 40.00, '2025-12-31', '2');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Cachecol', 30.00, 60.00, '2025-12-31', '3');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Varinha de Núcleo de Unicórnio', 60.00, 120.00, '2025-12-31', '1');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Varinha de Núcleo de Fênix', 70.00, 140.00, '2025-12-31', '1');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Livro Animais Fantásticos e Onde Habitam', 25.00, 50.00, '2025-12-31', '2');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Vestes', 40.00, 80.00, '2025-12-31', '3');
+INSERT INTO Produto (Nome, PrecoCusto, PrecoVenda, DataValidade, ID_marca) VALUES ('Chapéu Pontudo', 30.00, 60.00, '2025-12-31', '3');
+
+select*FROM Marca
+SELECT*FROM Produto

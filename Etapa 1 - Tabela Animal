@@ -1,0 +1,52 @@
+CREATE  TABLE Animal (
+  id                INT,
+  nome              VARCHAR(60),
+  data_nasc         DATE,
+  peso              DECIMAL (8,2),
+  cor               VARCHAR (15)
+  );
+  
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (1,  'MILA',       '1995-05-18',   8.45,   'marrom')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (2,  'kika',       '2005-04-28',   10.45,  'preta')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (3,  'Duda',       '2010-12-18',   9.45,   'amarelo')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (4,  'Nina',       '2010-12-18',   13.45,  'marrom')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (5,  'kika',       '2005-04-28',   10.45,  'preta')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (6,  'Ágata', 		'2015-04-09', 	13.9, 	'Branco')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (7,  'Félix', 		'2016-06-06', 	14.3, 	'Preto') 
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (8,  'Tom', 		'2013-02-08', 	11.2, 	'Azul') 
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (9,  'Garfield', 	'2015-07-06', 	17.1, 	'Laranja')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (10, 'Frajola', 	'2013-08-01', 	13.7, 	'Preto')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (11, 'Manda-Chuva','2012-02-03', 	12.3, 	'Amarelo')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (12, 'Snowball', 	'2014-04-06', 	13.2, 	'Preto')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (13, 'Ágata', 		'2015-08-03', 	11.9, 	'Azul')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (14, 'Gato de Botas', '2012-12-10', 11.6, 	'Amarelo')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (15, 'Kitty', 		'2020-04-06', 	11.6, 	'Amarelo')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (16, 'Milu', 		'2013-02-04', 	17.9, 	'Branco')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (17, 'Pluto', 		'2012-01-03', 	12.3, 	'Amarelo')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (18, 'Pateta', 	'2015-05-01', 	17.7, 	'Preto')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (19, 'Snoopy', 	'2013-07-02', 	18.2, 	'Branco')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (20, 'Rex', 		'2019-11-03', 	19.7, 	'Beje')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (21, 'Bidu', 		'2012-09-08', 	12.4, 	'Azul')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (22, 'Dum Dum', 	'2015-04-06', 	11.2, 	'Laranja')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (23, 'Muttley', 	'2011-02-03', 	14.3, 	'Laranja')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (24, 'Scooby', 	'2012-01-02', 	19.9, 	'Marrom')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (25, 'Rufus', 		'2014-04-05', 	19.7, 	'Branco')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (26, 'Rex', 		'2021-08-19', 	19.7, 	'Branco')
+  INSERT INTO Animal (id, nome, data_nasc, peso, cor) VALUES (27, 'Cadu', 		'2021-08-19', 	19.7, 	'Vermelho')
+  
+;
+ select * FROM  Animal
+ select * FROM  Animal ORDER by nome;
+ select * FROM  Animal WHERE peso < 13.1;
+ select * FROM  Animal WHERE data_nasc BETWEEN '2015-02-00' AND '2015-12-31';
+ select * FROM  Animal WHERE cor = 'Branco' AND peso < 15.0;
+ select  nome, cor, peso FROM Animal WHERE nome LIKE 'B%'; 
+ select  nome, cor, peso FROM Animal WHERE cor IN ('Vermelho', 'Amarelo', 'Marrom', 'Laranja');
+ select  nome, cor, data_nasc, peso FROM Animal ORDER BY data_nasc;
+ select * FROM  Animal WHERE nome LIKE 'C%' AND cor != 'Branco';
+ select * FROM  Animal WHERE nome LIKE '%ba%';
+ select * FROM  Animal WHERE peso BETWEEN 13 AND 15;
+ select * FROM  Animal WHERE peso <= 30 AND cor in ('Amarelo', 'Roxo') AND data_nasc > '2012-00-00';
+ SELECT * FROM  Animal WHERE strftime('%m-%d', data_nasc) BETWEEN '12-22' AND '12-31'
+   OR strftime('%m-%d', data_nasc) BETWEEN '01-01' AND '01-19';
+ SELECT * FROM  Animal WHERE nome LIKE '% %';

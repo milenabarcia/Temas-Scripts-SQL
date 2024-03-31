@@ -22,3 +22,5 @@ INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potte
 INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e o Enigma do Príncipe', 'Harry descobre um livro antigo que pertenceu ao misterioso Príncipe Mestiço e aprende mais sobre o passado de Voldemort. Ele se prepara para o confronto final enquanto o mundo bruxo enfrenta tempos sombrios.', 'Warner Bros.', 1);
 INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e as Relíquias da Morte – Parte 1', 'Harry, Ron e Hermione embarcam em uma perigosa missão para destruir as Horcruxes de Voldemort. Eles enfrentam desafios e perdas enquanto o poder das trevas cresce.', 'Warner Bros.', 1);
 INSERT INTO Filmes (Titulo, Sinopse, Estudio, ID_categoria) VALUES ('Harry Potter e as Relíquias da Morte – Parte 2', ' Harry retorna a Hogwarts para encontrar e destruir a última Horcrux, confrontando Voldemort em uma batalha épica que determinará o destino do mundo mágico.', 'Warner Bros.', 1);
+
+SELECT*FROM Filmes
